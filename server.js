@@ -5,11 +5,9 @@ const socketIO = require("socket.io");
 
 
 const app=express();
-const port= 8000 || process.env.PORT;
+const port=process.env.PORT || 3030;
 // const port= 8000;
-app.get('/', (req, res) => {
-  res.sendStatus(200)
-})
+
 app.use(cors());
 app.get("/",(req, res)=>{
     res.sendStatus(200);
