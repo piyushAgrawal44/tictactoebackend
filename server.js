@@ -7,9 +7,12 @@ const socketIO = require("socket.io");
 const app=express();
 const port= 8000 || process.env.PORT;
 // const port= 8000;
-
+app.get('/', (req, res) => {
+  res.sendStatus(200)
+})
 app.use(cors());
 app.get("/",(req, res)=>{
+    res.sendStatus(200);
     res.send("<h1>Server is working with perfection</h1>");
 })
 const server=http.createServer(app);
